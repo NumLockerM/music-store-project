@@ -1,0 +1,44 @@
+@model MusicStore.Models.Product
+@{ ViewData["Title"] = "Редактирование"; }
+
+<h1>Редактирование товара</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post" class="card p-4 shadow-sm">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label class="form-label">Название</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Категория</label>
+                <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.Categories"></select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Цена (₽)</label>
+                <input asp-for="Price" type="number" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">На складе</label>
+                <input asp-for="StockQuantity" type="number" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Описание</label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">💾 Сохранить изменения</button>
+                <a href="/Admin" class="btn btn-secondary">Отмена</a>
+            </div>
+        </form>
+    </div>
+</div>

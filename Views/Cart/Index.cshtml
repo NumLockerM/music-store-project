@@ -1,0 +1,11 @@
+@{ ViewData["Title"] = "Корзина"; }
+
+<h1 class="mb-4">Ваша корзина</h1>
+
+<div id="cart-container">
+    </div>
+
+<div class="d-flex justify-content-between mt-4">
+    <a href="/Home/Catalog" class="btn btn-outline-secondary">Вернуться к покупкам</a>
+    <button class="btn btn-danger" onclick="clearCart()">Очистить всё</button>
+</div>

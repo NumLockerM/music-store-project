@@ -1,0 +1,97 @@
+﻿@{ ViewData["Title"] = "Главная"; }
+
+<div class="p-5 mb-5 bg-dark text-white rounded-3 shadow-lg overflow-hidden position-relative" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200'); background-size: cover;">
+    <div class="container-fluid py-5 text-center">
+        <h1 class="display-4 fw-bold">Твой путь к большой сцене</h1>
+        <p class="fs-4 mb-4">Огромный выбор инструментов от мировых брендов с гарантией качества.</p>
+        <a href="/Home/Catalog" class="btn btn-warning btn-lg px-5 fw-bold">В каталог</a>
+    </div>
+</div>
+
+<div class="d-flex justify-content-between align-items-end mb-4">
+    <h2>Хиты продаж</h2>
+    <a href="/Home/Catalog" class="text-decoration-none">Смотреть все →</a>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+    <div class="col">
+        <div class="card h-100 shadow-sm border-0 product-card">
+            <div style="height: 200px; background: #fff;" class="d-flex align-items-center justify-content-center p-3">
+                <img src="https://images.unsplash.com/photo-1550291652-6ea9114a47b1?w=400" class="img-fluid" style="max-height: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Fender Stratocaster</h5>
+                <p class="text-muted small mb-2">Профессиональная электрогитара</p>
+                <h4 class="text-danger fw-bold mt-auto">95 000 ₽</h4>
+                <button class="btn btn-primary buy-btn w-100 mt-2" data-name="Fender Stratocaster" data-price="95000">В корзину</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm border-0 product-card">
+            <div style="height: 200px; background: #fff;" class="d-flex align-items-center justify-content-center p-3">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400" class="img-fluid" style="max-height: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-truncate">Yamaha PSR-E373</h5>
+                <p class="text-muted small mb-2">Цифровой синтезатор</p>
+                <h4 class="text-danger fw-bold mt-auto">32 500 ₽</h4>
+                <button class="btn btn-primary buy-btn w-100 mt-2" data-name="Yamaha PSR-E373" data-price="32500">В корзину</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 shadow-sm border-0 product-card">
+            <div style="height: 200px; background: #fff;" class="d-flex align-items-center justify-content-center p-3">
+                <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=400" class="img-fluid" style="max-height: 100%; object-fit: contain;">
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Roland TD-1DMK</h5>
+                <p class="text-muted small mb-2">Электронные барабаны</p>
+                <h4 class="text-danger fw-bold mt-auto">78 000 ₽</h4>
+                <button class="btn btn-primary buy-btn w-100 mt-2" data-name="Roland TD-1DMK" data-price="78000">В корзину</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light rounded p-5 mb-5 shadow-sm">
+    <h2 class="text-center mb-5">Отзывы наших клиентов</h2>
+    <div id="reviewCarousel" class="carousel slide dark" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h4 class="fst-italic text-secondary">"Прекрасный сервис! Купил гитару, доставили в Иркутск за 2 дня. Качество инструмента на высоте."</h4>
+                        <p class="fw-bold mt-3 mb-0">⭐⭐⭐⭐⭐</p>
+                        <p class="text-muted small">— Александр В., г. Ангарск</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h4 class="fst-italic text-secondary">"Лучший музыкальный магазин в городе. Очень вежливые консультанты, помогли выбрать первый синтезатор ребенку."</h4>
+                        <p class="fw-bold mt-3 mb-0">⭐⭐⭐⭐⭐</p>
+                        <p class="text-muted small">— Мария К., г. Иркутск</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h4 class="fst-italic text-secondary">"Заказывал барабанную установку. Все пришло в идеальной упаковке. Спасибо SoundWave!"</h4>
+                        <p class="fw-bold mt-3 mb-0">⭐⭐⭐⭐⭐</p>
+                        <p class="text-muted small">— Иван Д., г. Шелехов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>
